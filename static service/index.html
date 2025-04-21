@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Static Caching</title>
+</head>
+<body>
+  <h1>Static Caching Example</h1>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('static-sw.js')
+        .then(() => console.log('Static SW registered ✅'))
+        .catch(err => console.log('SW registration failed ❌', err));
+    }
+  </script>
+</body>
+</html>
